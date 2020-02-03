@@ -36,7 +36,7 @@ const watchFiles = () => {
     gulp.series(recompileMessage, assembleClickdummyComponents, assembleClickdummyPages, assembleLSGComponents, buildStylemark, recompiledMessage)
   );
   gulp.watch(
-    join(componentsSrc, "**/*.json"),
+    join(componentsSrc, "**/*.+(json|yaml)"),
     gulp.series(recompileMessage, assembleClickdummyComponents, assembleClickdummyPages, assembleLSGComponents, buildStylemark, recompiledMessage)
   );
 };

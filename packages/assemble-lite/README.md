@@ -18,7 +18,7 @@ assembleLite({
   partials: 'src/components/**/*.hbs',
   pages: 'src/pages/**/*.hbs',
   templates: 'src/templates/**/*.hbs',
-  data: ['src/components/**/*.json', 'src/templates/**/*.json'],
+  data: ['src/components/**/*.+(json|yaml)', 'src/templates/**/*.json'],
   helpers: 'src/helpers/*.js',
   target: 'target/pages',
 }).then(() => {
@@ -34,6 +34,6 @@ assembleLite({
 | partials  | glob \| glob[]  | where are the partials                    |
 | pages     | glob \| glob[]  | where are the pages                       |
 | templates | glob \| glob[]  | where are the templates                   |
-| data      | glob \| glob[]  | where is the data (at the moment only .json files are supported)                        |
+| data      | glob \| glob[]  | where is the data (`.json` and `.yaml` files are supported)                        |
 | helpers   | glob \| glob[]  | where are the custom handlebars-helpers (the collection from [handlebars-helpers](https://www.npmjs.com/package/handlebars-helpers) is already included - out of the box)                   |
 | target        | glob \| glob[]  | defines, where to put the rendered files  |

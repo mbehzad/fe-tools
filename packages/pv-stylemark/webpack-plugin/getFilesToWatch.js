@@ -10,8 +10,8 @@ const getFilesToWatch = async () => {
   // add .md files
   files.push(...await asyncGlob(join(componentsSrc, "**/*.md")));
 
-  // add .json Components files
-  files.push(...await asyncGlob(join(componentsSrc, "**/*.json")));
+  // add .json / .yaml Components files
+  files.push(...await asyncGlob(join(componentsSrc, "**/*.+(json|yaml)")));
 
   // add .hbs Components files
   files.push(...await asyncGlob(join(componentsSrc, "**/*.hbs")));

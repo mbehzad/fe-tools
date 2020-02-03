@@ -10,7 +10,7 @@ const assembleClickdummyComponents = () => assemble({
   partials: resolveApp(join(componentsSrc, "**/*.hbs")),
   pages: resolveApp(join(componentsSrc, "**/*.hbs")),
   templates: resolveApp(join(cdTemplatesSrc, "**/*.hbs")),
-  data: [resolveApp(join(componentsSrc, "**/*.json")), resolveApp(join(cdTemplatesSrc, "*.json"))],
+  data: [resolveApp(join(componentsSrc, "**/*.+(json|yaml)")), resolveApp(join(cdTemplatesSrc, "*.json"))],
   helpers: resolveApp(join(hbsHelperSrc, "*.js")),
   target: resolveApp(join(destPath, "components"))
 });

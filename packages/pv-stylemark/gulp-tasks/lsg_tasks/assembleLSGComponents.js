@@ -9,7 +9,7 @@ const assembleLSGComponents = () => assemble({
   partials: resolveApp(join(componentsSrc, "**/*.hbs")),
   pages: resolveApp(join(componentsSrc, "**/*.hbs")),
   templates: resolveApp(join(lsgTemplatesSrc, "**/*.hbs")),
-  data: resolveApp(join(componentsSrc, "**/*.json")),
+  data: resolveApp(join(componentsSrc, "**/*.+(json|yaml)")),
   helpers: resolveApp(join(hbsHelperSrc, "*.js")),
   target: resolveApp(join(destPath, "/lsg_components"))
 });
