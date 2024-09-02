@@ -18,6 +18,7 @@ const {
 async function buildStylemarkLsg({
   shouldCopyStyleguideFiles = true,
   shouldAssemble = true,
+  timeout = 0,
 } = {}) {
   await Promise.all([
     shouldCopyStyleguideFiles &&
@@ -30,7 +31,7 @@ async function buildStylemarkLsg({
   ]);
 
   await new Promise((resolve) => {
-    return buildStylemark(resolve);
+    return buildStylemark(resolve, timeout);
   });
 }
 

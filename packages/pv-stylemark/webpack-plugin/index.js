@@ -91,6 +91,7 @@ class PvStylemarkPlugin {
             shouldCopyStyleguideFiles: copyStylemarkFiles,
             // unless files were changed but none was an assemble file
             shouldAssemble: false,
+            timeout: compiler.watchMode ? 0 : 5_000,
           });
         }
 
